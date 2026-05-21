@@ -194,13 +194,10 @@ Multi-container orchestration using Docker Compose.
 
 # Screenshots
 
-Add screenshots here:
 
-
-
-[chat](screenshots/chat.png)
-[docs](screenshots/swagger.png)
-[login](screenshots/login.png)
+* [chat](screenshots/chat.png)
+* [docs](screenshots/swagger.png)
+* [login](screenshots/login.png)
 
 
 ---
