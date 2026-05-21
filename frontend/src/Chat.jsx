@@ -70,7 +70,7 @@ function Chat({ userId }) {
   const connectWebSocket = () => {
 
     const ws = new WebSocket(
-      `ws://127.0.0.1:8000/ws/chat/${userId}/`
+      `wss://realtime-chat-app-backend-p1by.onrender.com/ws/chat/${userId}/`
     );
 
     ws.onopen = () => {
