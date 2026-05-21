@@ -1,0 +1,43 @@
+services:
+
+  backend:
+    build: ./backend
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./backend:/app
+
+    depends_on:
+      - redis
+      - postgres
+
+  frontend:
+    build: ./frontend
+
+    ports:
+      - "5173:5173"
+
+    volumes:
+      - ./frontend:/app
+
+    depends_on:
+      - backend
+
+  redis:
+    image: redis:7
+
+    ports:
+      - "6379:6379"
+
+  postgres:
+    image: postgres:17
+
+    environment:
+      POSTGRES_DB: chatdb
+      POSTGRES_USER: chatuser
+      POSTGRES_PASSWORD: chatpassword
+
+    ports:
+      - "5432:5432"
