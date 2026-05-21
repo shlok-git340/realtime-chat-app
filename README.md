@@ -84,9 +84,9 @@ PostgreSQL Database
 
 Interactive Swagger documentation:
 
-```text
-https://realtime-chat-app-backend-p1by.onrender.com/swagger/
-```
+
+[openAPI documentation](https://realtime-chat-app-backend-p1by.onrender.com/swagger/)
+
 
 Example endpoints:
 
@@ -197,9 +197,10 @@ Multi-container orchestration using Docker Compose.
 Add screenshots here:
 
 
-screenshots/login.png
-screenshots/chat.png
-screenshots/swagger.png
+
+[chat](screenshots/chat.png)
+[docs](screenshots/swagger.png)
+[login](screenshots/login.png)
 
 
 ---
