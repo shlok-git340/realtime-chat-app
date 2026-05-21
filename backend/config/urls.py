@@ -1,20 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from rest_framework import permissions
-
-from drf_yasg.views import get_schema_view
-from drf_yasg import openapi
-
-
-schema_view = get_schema_view(
-    openapi.Info(
-        title="Realtime Chat API",
-        default_version='v1',
-        description="Realtime chat backend with Django Channels",
-    ),
-    public=True,
-    permission_classes=[permissions.AllowAny],
+from drf_spectacular.views import (
+    SpectacularAPIView,
+    SpectacularSwaggerView,
 )
 
 urlpatterns = [
@@ -25,11 +14,16 @@ urlpatterns = [
     path('api/chat/', include('chat.urls')),
 
     path(
-        'swagger/',
-        schema_view.with_ui('swagger', cache_timeout=0),
+        'api/schema/',
+        SpectacularAPIView.as_view(),
+        name='schema',
     ),
+
     path(
-    'redoc/',
-    schema_view.with_ui('redoc', cache_timeout=0),
-),
+        'swagger/',
+        SpectacularSwaggerView.as_view(
+            url_name='schema'
+        ),
+        name='swagger-ui',
+    ),
 ]

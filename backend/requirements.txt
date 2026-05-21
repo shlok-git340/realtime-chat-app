@@ -14,11 +14,14 @@ Django==6.0.5
 django-cors-headers==4.9.0
 djangorestframework==3.17.1
 djangorestframework_simplejwt==5.5.1
+drf-spectacular==0.29.0
 drf-yasg==1.21.15
 hyperlink==21.0.0
 idna==3.15
 Incremental==24.11.0
 inflection==0.5.1
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
 msgpack==1.1.2
 packaging==26.2
 psycopg2-binary==2.9.12
@@ -31,6 +34,8 @@ pyOpenSSL==26.2.0
 pytz==2026.2
 PyYAML==6.0.3
 redis==7.4.0
+referencing==0.37.0
+rpds-py==0.30.0
 service-identity==24.2.0
 sqlparse==0.5.5
 Twisted==26.4.0
